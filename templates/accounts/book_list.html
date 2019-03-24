@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>profile</title>
+
+</head>
+<body>
+<ul>
+
+    {% for books in book %}
+        <a href="{% url 'update' books.id %}">
+            <li>{{ books.book_title }}</li>
+        </a>
+    {% endfor %}
+</ul>
+<a href="{% url 'create' %}"> Upload a New Book</a>
+</body>
+</html>

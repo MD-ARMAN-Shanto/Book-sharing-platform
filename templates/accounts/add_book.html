@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+    {% comment %}{% if form %}
+        <a href="{% url 'delete' form.id %}">Delete Book</a>
+    {% endif %}
+    {% endcomment %}
+</body>
+</html>
